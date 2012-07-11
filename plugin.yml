@@ -1,0 +1,16 @@
+name: ReEnder
+version: '0.10'
+description: 'Recreate the Ender Crystals and respawn the Ender Dragon with just one command!' 
+main: me.firedroide.plugins.reender.ReEnder
+load: POSTWORLD
+author: 'Firedroide'
+database: false
+commands:
+  reender:
+    description: 'Use ReEnder to recreate the end!'
+    aliases: [reend]
+permissions:
+  reender.use:
+    description: Gives you the permissions to use /reender or /reend
+    default: OP
+
