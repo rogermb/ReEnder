@@ -69,6 +69,7 @@ public class ReEnder extends JavaPlugin implements CommandExecutor {
 			
 			for (Block b : crystals.get(w)) {
 				w.spawn(b.getLocation().add(0.5, 0, 0.5), EnderCrystal.class);
+				if (b.getTypeId() != Material.BEDROCK.getId()) b.setType(Material.BEDROCK);
 				b.getRelative(BlockFace.UP).setType(Material.FIRE);
 			}
 		}
