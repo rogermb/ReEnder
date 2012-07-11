@@ -13,4 +13,3 @@ permissions:
   reender.use:
     description: Gives you the permissions to use /reender or /reend
     default: OP
-
