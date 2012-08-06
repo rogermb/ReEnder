@@ -50,7 +50,7 @@ public class ReEnder extends JavaPlugin implements CommandExecutor {
 		}
 		String v = getConfig().getString("generated", getDescription().getVersion());
 		getConfig().options().header("# Config generated with ReEnder " + v + 
-									"\n#Last edited with " + getDescription().getVersion());
+									"\n#Last edited with v" + getDescription().getVersion());
 		
 		ConfigReader cr = new ConfigReader(this);
 		
