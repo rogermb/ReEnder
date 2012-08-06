@@ -10,6 +10,20 @@ commands:
     description: 'Use ReEnder to recreate the end!'
     aliases: [reend]
 permissions:
+  reender.*:
+    description: Grants you access to all ReEnder commands.
+    default: OP
+    children:
+      reender.reload: true
+      reender.use: true
+      reender.withworldargument: true
+      reender.withflags: true
+      reender.worlds.*: true
+  reender.reload:
+    description: Allows you to use /reender reload to reload the plugin.
   reender.use:
     description: Gives you the permissions to use /reender or /reend
-    default: OP
+  reender.withworldargument:
+    description: Allows you to use /reender <world name>.
+  reender.withflags:
+    description: Allows you to use /reender with any flags.
