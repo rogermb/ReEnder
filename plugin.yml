@@ -1,5 +1,5 @@
 name: ReEnder
-version: '0.10'
+version: '0.11'
 description: 'Recreate the Ender Crystals and respawn the Ender Dragon with just one command!' 
 main: me.firedroide.plugins.reender.ReEnder
 load: POSTWORLD

@@ -1,6 +1,6 @@
-# Config generated with ReEnder v0.10
+# Config generated with ReEnder v0.11
 
-generated: 'v0.10'
+generated: 'v0.11'
 main:
   RegenerateCrystals: true
   RespawnEnderdragon: true
