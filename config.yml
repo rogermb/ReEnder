@@ -1,0 +1,31 @@
+# Config generated with ReEnder v0.10
+
+generated: 'v0.10'
+main:
+  RegenerateCrystals: true
+  RespawnEnderdragon: true
+  RemoveEndPortals: true
+  
+  # If you run the plugin in async mode, you won't get a small lag spike when repairing the end.
+  # However, this might cause some exception if the world gets modified by another plugin
+  # while the end is being repaired.
+  RunInAsyncMode: false
+listener:
+  Enabled: false
+  
+  # Repairs the end when somebody leaves the end
+  # and there's nobody else left on this world.
+  RepairOnLeave: true
+  
+  # Repairs the end when somebody enters the end
+  # and nobody else is already on this world.
+  RepairOnEnter: false
+  
+  # A list of worlds you'd like to be checked
+  # For example:
+  # RegisteredWorlds:
+  #   - world_the_end
+  #   - whatever_end
+  # 
+  # 'RegisteredWorlds: []' means that no world should be checked.
+  RegisteredWorlds: []
