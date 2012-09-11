@@ -77,7 +77,7 @@ public class ReEnder extends JavaPlugin implements CommandExecutor {
 		
 		if (args.length == 1 && args[0].equalsIgnoreCase("reload")) {
 			if (!sender.hasPermission("reender.reload") && sender instanceof Player) {
-				sender.sendMessage("§4You don't have the permission to use this command.");
+				sender.sendMessage("\u00A74You don't have the permission to use this command.");
 				return true;
 			}
 			
@@ -85,14 +85,14 @@ public class ReEnder extends JavaPlugin implements CommandExecutor {
 			loadConfig();
 			
 			if (sender instanceof Player) {
-				sender.sendMessage("§aReEnder v" + getDescription().getVersion() + " successfully reloaded.");
+				sender.sendMessage("\u00A7aReEnder v" + getDescription().getVersion() + " successfully reloaded.");
 			}
 			getLogger().info("ReEnder v" + getDescription().getVersion() + " successfully reloaded.");
 			return true;
 		}
 		
 		if (!sender.hasPermission("reender.use") && sender instanceof Player) {
-			sender.sendMessage("§4You don't have the permission to use this command.");
+			sender.sendMessage("\u00A74You don't have the permission to use this command.");
 			return true;
 		}
 		
@@ -104,30 +104,30 @@ public class ReEnder extends JavaPlugin implements CommandExecutor {
 				sender.sendMessage("You need to specify a world if you want to execute this command from the console.");
 				return true;
 			} else if (!((Player) sender).getWorld().getEnvironment().equals(Environment.THE_END)) {
-				sender.sendMessage("§cThe world you are in must be 'The End'.");
-				sender.sendMessage("§cOtherwise you should use /reend <World>.");
+				sender.sendMessage("\u00A7cThe world you are in must be 'The End'.");
+				sender.sendMessage("\u00A7cOtherwise you should use /reend <World>.");
 				return true;
 			}
 			w = ((Player) sender).getWorld();
 		} else {
 			if (!sender.hasPermission("reender.withworldargument") && sender instanceof Player) {
-				sender.sendMessage("§4You don't have the permission to use this command with a world as an argument.");
+				sender.sendMessage("\u00A74You don't have the permission to use this command with a world as an argument.");
 				return true;
 			}
 			if (!getWorld(args).getEnvironment().equals(Environment.THE_END)) {
-				sender.sendMessage("§cThe world needs to be in 'The End' dimension.");
+				sender.sendMessage("\u00A7cThe world needs to be in 'The End' dimension.");
 				return true;
 			}
 			w = getWorld(args);
 		}
 		
 		if (!(sender.hasPermission("reender.worlds.*") || sender.hasPermission("reender.worlds." + w.getName())) && sender instanceof Player) {
-			sender.sendMessage("§4You don't have the permission to use this command for this world.");
+			sender.sendMessage("\u00A74You don't have the permission to use this command for this world.");
 			return true;
 		}
 		if (hasFlagArgument(args)) {
 			if (!sender.hasPermission("reender.withflags") && sender instanceof Player) {
-				sender.sendMessage("§4You don't have the permission to use this command with flags.");
+				sender.sendMessage("\u00A74You don't have the permission to use this command with flags.");
 				return true;
 			}
 		} else {
