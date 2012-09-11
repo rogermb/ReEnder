@@ -134,6 +134,8 @@ public class ReEnder extends JavaPlugin implements CommandExecutor {
 			args = getDefaultArguments();
 		}
 		
+		//TODO: Async Flag
+		
 		EndRepairer er = new EndRepairer(this, w, args);
 		if (runInAsyncMode) {
 			Bukkit.getScheduler().scheduleAsyncDelayedTask(this, er);
